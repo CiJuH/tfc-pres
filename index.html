@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACExchanger — Presentación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">ACExchanger</span>
+  <div class="nav-center">
+    <button class="nav-btn" id="prevBtn" onclick="goTo(current-1,-1)">‹</button>
+    <span class="counter" id="counter">1 / 15</span>
+    <button class="nav-btn" id="nextBtn" onclick="goTo(current+1,1)">›</button>
+  </div>
+  <div class="nav-right">
+    <div class="progress"><div class="progress-fill" id="progressFill" style="width:6.67%"></div></div>
+  </div>
+</nav>
+
+<div class="slides-container">
+
+  <!-- S1: Portada -->
+  <div class="slide">
+    <div class="slide-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:16px;">
+      <img src="assets/img/nabo.png" style="width:80px;height:80px;object-fit:contain;">
+      <div style="font-size:40px;font-weight:600;color:#2D5A1B;">ACExchanger</div>
+      <div style="font-size:20px;color:#4C7A2E;font-style:italic;">"Tu isla. Sin caos."</div>
+      <div style="margin-top:16px;color:#4C7A2E;font-size:14px;">
+        <div style="font-weight:500;">Cintia Jurado</div>
+        <div>2026</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S2: El problema -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">¿Por qué existe ACExchanger?</div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">🐢</div>
+          <div style="font-weight:500;color:#2D5A1B;margin-bottom:4px;">Sin turnos</div>
+          <div style="font-size:12px;color:#666;">Largas esperas sin sistema de colas organizado</div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">🔓</div>
+          <div style="font-weight:500;color:#2D5A1B;margin-bottom:4px;">Sin control</div>
+          <div style="font-size:12px;color:#666;">Códigos Dodo compartidos sin restricciones</div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">🔔</div>
+          <div style="font-weight:500;color:#2D5A1B;margin-bottom:4px;">Sin herramientas</div>
+          <div style="font-size:12px;color:#666;">Sin notificaciones ni apps específicas</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S3: Propuesta de valor -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">La solución</div>
+      <div class="card" style="text-align:center;padding:24px;margin-bottom:20px;">
+        <div style="font-size:16px;color:#333;line-height:1.8;">Una app Android nativa para gestionar visitas a islas de Animal Crossing: <strong style="color:#2D5A1B;">colas por turnos</strong>, <strong style="color:#2D5A1B;">control de acceso</strong> y <strong style="color:#2D5A1B;">valoraciones</strong>.</div>
+      </div>
+      <div class="grid-3" style="max-width:360px;margin:0 auto;">
+        <div style="text-align:center;"><div style="font-size:28px;">🏝️</div><div style="font-size:11px;color:#4C7A2E;margin-top:6px;">Colas organizadas</div></div>
+        <div style="text-align:center;"><div style="font-size:28px;">🔑</div><div style="font-size:11px;color:#4C7A2E;margin-top:6px;">Código protegido</div></div>
+        <div style="text-align:center;"><div style="font-size:28px;">⭐</div><div style="font-size:11px;color:#4C7A2E;margin-top:6px;">Valoraciones</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S4: Competidores -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">¿Qué hay en el mercado?</div>
+      <div class="card" style="padding:0;overflow:hidden;margin-bottom:12px;">
+        <table>
+          <thead><tr><th>Característica</th><th>turnip.exchange</th><th>nookfriends.com</th><th>acnh.link</th><th>ACExchanger</th></tr></thead>
+          <tbody>
+            <tr><td>App nativa Android</td><td>❌</td><td>❌</td><td>❌</td><td class="td-highlight">✅</td></tr>
+            <tr><td>Sistema de colas</td><td>✅</td><td>❌</td><td>❌</td><td class="td-highlight">✅</td></tr>
+            <tr><td>Control del código Dodo</td><td>✅</td><td>❌</td><td>Parcial</td><td class="td-highlight">✅</td></tr>
+            <tr><td>Mensajería integrada</td><td>❌</td><td>❌</td><td>❌</td><td class="td-highlight">✅</td></tr>
+            <tr><td>Valoraciones</td><td>❌</td><td>❌</td><td>❌</td><td class="td-highlight">✅</td></tr>
+            <tr><td>Moderación / baneos</td><td>Parcial</td><td>❌</td><td>❌</td><td class="td-highlight">✅</td></tr>
+            <tr class="tr-accent"><td>App gratuita</td><td>✅</td><td>✅</td><td>✅</td><td>✅</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="banner">ACExchanger es la única solución con app nativa Android</div>
+    </div>
+  </div>
+
+  <!-- S5: Investigación -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">Validación con usuarios reales</div>
+      <div class="grid-3" style="margin-bottom:16px;">
+        <div class="card" style="text-align:center;"><div class="big-num">22</div><div class="metric-label">encuestados</div></div>
+        <div class="card" style="text-align:center;"><div class="big-num">75%</div><div class="metric-label">prefiere móvil</div></div>
+        <div class="card" style="text-align:center;"><div class="big-num">75%</div><div class="metric-label">usaría una app específica</div></div>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div style="font-size:12px;font-weight:500;color:#2D5A1B;margin-bottom:10px;">¿Qué problemas encuentras actualmente?</div>
+          <div class="h-bar-row"><div class="h-bar-label">Largas esperas</div><div class="h-bar-track"><div class="h-bar-fill" style="width:100%;"><span class="h-bar-pct">25%</span></div></div></div>
+          <div class="h-bar-row"><div class="h-bar-label">Códigos sin control</div><div class="h-bar-track"><div class="h-bar-fill" style="width:100%;"><span class="h-bar-pct">25%</span></div></div></div>
+          <div class="h-bar-row"><div class="h-bar-label">Demasiada gente a la vez</div><div class="h-bar-track"><div class="h-bar-fill light" style="width:50%;"><span class="h-bar-pct">12,5%</span></div></div></div>
+          <div class="h-bar-row"><div class="h-bar-label">Falta de orden y colas</div><div class="h-bar-track"><div class="h-bar-fill light" style="width:50%;"><span class="h-bar-pct">12,5%</span></div></div></div>
+          <div class="h-bar-row"><div class="h-bar-label">Sin notificaciones</div><div class="h-bar-track"><div class="h-bar-fill light" style="width:50%;"><span class="h-bar-pct">12,5%</span></div></div></div>
+          <div class="h-bar-row"><div class="h-bar-label">Tienes que llegar a un acuerdo</div><div class="h-bar-track"><div class="h-bar-fill light" style="width:50%;"><span class="h-bar-pct">12,5%</span></div></div></div>
+          <div class="h-bar-row"><div class="h-bar-label">Escasez de gente</div><div class="h-bar-track"><div class="h-bar-fill light" style="width:50%;"><span class="h-bar-pct">12,5%</span></div></div></div>
+        </div>
+        <div class="card">
+          <div style="font-size:12px;font-weight:500;color:#2D5A1B;margin-bottom:10px;">¿Plataforma preferida?</div>
+          <div class="donut-wrap">
+            <svg width="120" height="120" viewBox="0 0 120 120">
+              <!-- Fondo -->
+              <circle cx="60" cy="60" r="45" fill="none" stroke="#EAF2E3" stroke-width="18"/>
+              <!-- Móvil 75% -->
+              <circle cx="60" cy="60" r="45" fill="none" stroke="#2D5A1B" stroke-width="18"
+                stroke-dasharray="212.06 282.74"
+                stroke-dashoffset="-70.69"
+                transform="rotate(-90 60 60)"/>
+              <!-- Web 25% -->
+              <circle cx="60" cy="60" r="45" fill="none" stroke="#9dc87a" stroke-width="18"
+                stroke-dasharray="70.69 282.74"
+                stroke-dashoffset="-282.06"
+                transform="rotate(-90 60 60)"/>
+              <!-- Texto centro -->
+              <text x="60" y="55" text-anchor="middle" font-size="14" font-weight="600" fill="#2D5A1B" font-family="Plus Jakarta Sans, sans-serif">75%</text>
+              <text x="60" y="70" text-anchor="middle" font-size="9" fill="#4C7A2E" font-family="Plus Jakarta Sans, sans-serif">móvil</text>
+            </svg>
+            <div class="donut-legend">
+              <div class="legend-item"><div class="legend-dot" style="background:#2D5A1B;"></div>Móvil — 75%</div>
+              <div class="legend-item"><div class="legend-dot" style="background:#9dc87a;"></div>Web — 25%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S6: Persona -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">Nuestro usuario</div>
+      <div class="card" style="max-width:500px;margin:0 auto;">
+        <div class="persona-wrap">
+          <div style="text-align:center;flex-shrink:0;">
+            <div class="avatar">👩‍💻</div>
+            <div style="font-weight:500;margin-top:8px;color:#2D5A1B;">Laura, 27 años</div>
+            <div style="font-size:11px;color:#4C7A2E;">Jugadora casual</div>
+          </div>
+          <div style="flex:1;">
+            <div style="font-size:13px;color:#333;line-height:2.4;">
+              <div>🎮 Juega por temporadas</div>
+              <div>💬 Usa Discord para buscar intercambios</div>
+              <div>✨ Necesita colas, notificaciones y control de acceso</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S7: MVP -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">¿Qué construimos primero?</div>
+      <div class="grid-2">
+        <div class="card-dark">
+          <div style="font-weight:500;margin-bottom:12px;">🚀 MVP</div>
+          <div class="mvp-item"><span class="mvp-code">RF01</span>Gestión de islas: crear, editar y eliminar</div>
+          <div class="mvp-item"><span class="mvp-code">RF02</span>Gestión de colas con código Dodo</div>
+          <div class="mvp-item"><span class="mvp-code">RF03</span>Cola de espera por turnos</div>
+          <div class="mvp-item"><span class="mvp-code">RF04</span>Código Dodo protegido por estado</div>
+          <div class="mvp-item"><span class="mvp-code">RF05</span>Autenticación con email y contraseña</div>
+          <div class="mvp-item"><span class="mvp-code">RF06</span>Sistema de valoraciones</div>
+          <div style="border-top:0.5px solid rgba(255,255,255,0.2);margin-top:8px;padding-top:8px;" class="mvp-item"><span class="mvp-code">RNF</span>Seguridad JWT, rendimiento, usabilidad</div>
+        </div>
+        <div class="card">
+          <div style="font-weight:500;margin-bottom:12px;color:#4C7A2E;">📋 Futuro</div>
+          <div class="future-item"><span>RF07 — Moderación y baneos</span><span>✅</span></div>
+          <div class="future-item"><span>RF08 — Notificaciones push</span><span>✅</span></div>
+          <div class="future-item"><span>RF09 — Mensajería privada</span><span>⏳</span></div>
+          <div class="future-item"><span>RF10 — Historial de visitas</span><span>✅</span></div>
+          <div class="future-item"><span>RF11 — OAuth Discord y Google</span><span>⏳</span></div>
+          <div style="font-size:11px;color:#888;margin-top:12px;border-top:0.5px solid #EAF2E3;padding-top:8px;">✅ Implementado &nbsp;|&nbsp; ⏳ Pendiente</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S8: Stack -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">Stack tecnológico</div>
+      <div style="display:flex;align-items:center;justify-content:center;gap:16px;flex-wrap:wrap;">
+        <div class="card" style="min-width:180px;text-align:center;">
+          <div style="font-weight:500;margin-bottom:12px;color:#2D5A1B;">🖥️ Backend</div>
+          <div style="font-size:13px;color:#555;line-height:2.2;">
+            <div style="font-weight:500;color:#333;">FastAPI (Python)</div>
+            <div>PostgreSQL</div>
+            <div>Alembic (migraciones)</div>
+            <div>SQLAlchemy ORM</div>
+            <div>Pydantic (validación)</div>
+          </div>
+        </div>
+        <div style="text-align:center;color:#4C7A2E;font-size:13px;padding:0 8px;">
+          <div>API REST</div>
+          <div style="font-size:24px;margin:4px 0;">⟷</div>
+          <div>JWT Auth</div>
+        </div>
+        <div class="card" style="min-width:180px;text-align:center;">
+          <div style="font-weight:500;margin-bottom:12px;color:#2D5A1B;">📱 Android</div>
+          <div style="font-size:13px;color:#555;line-height:2.2;">
+            <div style="font-weight:500;color:#333;">Kotlin</div>
+            <div>Jetpack Compose</div>
+            <div>Retrofit + OkHttp</div>
+            <div>Material Design 3</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S9: App 1 -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">La app en funcionamiento (1/2)</div>
+      <div class="grid-3">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="placeholder" style="width:100%;aspect-ratio:9/16;">Captura: Islas</div>
+          <div style="font-size:11px;color:#666;text-align:center;">Explorar islas disponibles</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="placeholder" style="width:100%;aspect-ratio:9/16;">Captura: Home</div>
+          <div style="font-size:11px;color:#666;text-align:center;">Panel principal del usuario</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="placeholder" style="width:100%;aspect-ratio:9/16;">Captura: Cola</div>
+          <div style="font-size:11px;color:#666;text-align:center;">Sistema de cola por turnos</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S10: App 2 -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">La app en funcionamiento (2/2)</div>
+      <div class="grid-3">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="placeholder" style="width:100%;aspect-ratio:9/16;">Captura: Perfil</div>
+          <div style="font-size:11px;color:#666;text-align:center;">Perfil con reputación</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="placeholder" style="width:100%;aspect-ratio:9/16;">Captura: Visitas</div>
+          <div style="font-size:11px;color:#666;text-align:center;">Historial de visitas</div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+          <div class="placeholder" style="width:100%;aspect-ratio:9/16;">Captura: Valoración</div>
+          <div style="font-size:11px;color:#666;text-align:center;">Sistema de valoraciones</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S11: Landing -->
+  <div class="slide">
+    <div class="slide-inner" style="align-items:center;text-align:center;">
+      <div class="slide-title">Presencia online</div>
+      <div style="width:100%;height:420px;margin:0 auto 16px;position:relative;border-radius:12px;overflow:hidden;border:0.5px solid #c8e0b4;">
+        <iframe
+          id="landing-frame"
+          src="https://cinjuh.wixsite.com/acexchanger"
+          style="width:100%;height:100%;border:none;"
+          onload="checkFrame(this)"
+          onerror="showFallback()">
+        </iframe>
+        <div id="landing-fallback" style="display:none;width:100%;height:100%;">
+          <img src="assets/img/landing.png" style="width:100%;height:100%;object-fit:cover;">
+        </div>
+      </div>
+      <a href="https://cinjuh.wixsite.com/acexchanger" target="_blank"
+        style="font-family:monospace;font-size:13px;color:#4C7A2E;text-decoration:none;border-bottom:1px solid #4C7A2E;padding-bottom:1px;">
+        cinjuh.wixsite.com/acexchanger
+      </a>
+      <div style="font-size:13px;color:#666;font-style:italic;margin-top:6px;">"Tu isla. Sin caos."</div>
+    </div>
+  </div>
+
+  <!-- S12: Viabilidad -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">¿Es viable?</div>
+      <div class="card" style="padding:0;overflow:hidden;margin-bottom:12px;">
+        <table>
+          <thead><tr><th style="text-align:left;">Concepto</th><th style="text-align:right;">Coste</th></tr></thead>
+          <tbody>
+            <tr><td>👩‍💻 Personal (3 meses)</td><td style="text-align:right;">5.553 €</td></tr>
+            <tr><td>☁️ Servidor / Base de datos (3 meses)</td><td style="text-align:right;">60 €</td></tr>
+            <tr><td>🔧 Licencias / Servicios</td><td style="text-align:right;">50 €</td></tr>
+            <tr><td>📱 Google Play Store</td><td style="text-align:right;">25 €</td></tr>
+            <tr class="tr-total"><td>Total aproximado</td><td style="text-align:right;">5.688 €</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center;"><div style="font-size:20px;">📋</div><div style="font-size:11px;color:#666;margin-top:6px;">Tarifa plana: 80 €/mes (12 meses)</div></div>
+        <div class="card" style="text-align:center;"><div style="font-size:20px;">🏦</div><div style="font-size:11px;color:#666;margin-top:6px;">ENISA: hasta 75.000 € sin aval</div></div>
+        <div class="card" style="text-align:center;"><div style="font-size:20px;">🚀</div><div style="font-size:11px;color:#666;margin-top:6px;">Neotec: hasta 250.000 € (85%)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S13: Modelo de negocio -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">¿Cómo gana dinero?</div>
+      <div class="grid-3">
+        <div class="card" style="text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">🆓</div>
+          <div style="font-weight:500;color:#2D5A1B;margin-bottom:8px;">Gratis</div>
+          <div style="font-size:12px;color:#666;line-height:2.2;"><div>Colas de espera</div><div>Valoraciones</div><div>Perfil público</div></div>
+        </div>
+        <div class="card-dark" style="text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">⭐</div>
+          <div style="font-weight:500;margin-bottom:8px;">Premium</div>
+          <div style="font-size:12px;opacity:0.85;line-height:2.2;"><div>Mensajería directa</div><div>Notificaciones avanzadas</div><div>Historial completo</div></div>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="font-size:28px;margin-bottom:8px;">📢</div>
+          <div style="font-weight:500;color:#2D5A1B;margin-bottom:8px;">Publicidad</div>
+          <div style="font-size:12px;color:#666;line-height:2.2;"><div>Banners no intrusivos</div><div>Patrocinios gaming</div><div>Afiliación merch</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S14: ODS -->
+  <div class="slide">
+    <div class="slide-inner">
+      <div class="slide-title">Impacto y oportunidades</div>
+      <div class="grid-2">
+        <div>
+          <div style="font-weight:500;color:#2D5A1B;margin-bottom:12px;">ODS relacionados</div>
+          <div style="display:flex;gap:8px;">
+            <div class="ods-badge" style="background:#E5243B;"><span style="font-size:20px;">8</span><span style="font-size:9px;">Trabajo</span></div>
+            <div class="ods-badge" style="background:#FD6925;"><span style="font-size:20px;">9</span><span style="font-size:9px;">Industria</span></div>
+            <div class="ods-badge" style="background:#DD1367;"><span style="font-size:20px;">10</span><span style="font-size:9px;">Igualdad</span></div>
+          </div>
+        </div>
+        <div>
+          <div style="font-weight:500;color:#2D5A1B;margin-bottom:12px;">Sinergias</div>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div class="card" style="display:flex;align-items:center;gap:10px;padding:10px 14px;"><span style="font-size:18px;">🎮</span><span style="font-size:13px;color:#333;">Creadores de contenido gaming</span></div>
+            <div class="card" style="display:flex;align-items:center;gap:10px;padding:10px 14px;"><span style="font-size:18px;">💬</span><span style="font-size:13px;color:#333;">Comunidades Discord / Reddit</span></div>
+            <div class="card" style="display:flex;align-items:center;gap:10px;padding:10px 14px;"><span style="font-size:18px;">🎯</span><span style="font-size:13px;color:#333;">Otros juegos multijugador sociales</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- S15: Cierre -->
+  <div class="slide">
+    <div class="slide-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px;">
+      <img src="assets/img/nabo.png" style="width:72px;height:72px;object-fit:contain;">
+      <div style="font-size:36px;font-weight:500;color:#2D5A1B;font-style:italic;">"Tu isla. Sin caos."</div>
+      <div style="font-size:16px;color:#4C7A2E;">ACExchanger — Cintia Jurado, 2026</div>
+      <div class="card" style="margin-top:8px;">
+        <div style="font-size:12px;color:#888;margin-bottom:4px;">Landing page</div>
+        <div style="font-family:monospace;font-size:13px;color:#2D5A1B;">cinjuh.wixsite.com/acexchanger</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="assets/nav.js"></script>
+</body>
+</html>
